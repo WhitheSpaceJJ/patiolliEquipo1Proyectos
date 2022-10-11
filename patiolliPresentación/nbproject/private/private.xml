@@ -5,13 +5,11 @@
         <group>
             <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/Dado.java</file>
             <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/TableroGrafico.java</file>
-            <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/Figura.java</file>
             <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/vista/FInicio.java</file>
             <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/CasillaEspecial.java</file>
-            <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/CompositorCasilla.java</file>
             <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/CasillaNormal.java</file>
-            <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/CasillaBordeada.java</file>
             <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/CasillaEntradaSalida.java</file>
+            <file>file:/C:/Users/Judi/Desktop/Proyectos%20de%20Arquitectura/patiolliPresentación/src/Dibujo/CasillaBordeada.java</file>
         </group>
     </open-files>
 </project-private>
