@@ -4,7 +4,6 @@
  */
 package vista;
 
-import Dibujo.DadoGrafico;
 import Dibujo.TableroGrafico;
 import control.Control;
 import control.IControl;
@@ -16,7 +15,6 @@ public class FJuego extends javax.swing.JFrame {
 
     private static FJuego instanceFJuego;
     private int tamaño;
-    private DadoGrafico dados;
     private IControl control;
 
     /**

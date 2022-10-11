@@ -7,11 +7,7 @@ package vista;
 import control.Control;
 import control.IControl;
 import javax.swing.JOptionPane;
-//import Dominio.Jugador;
-//import conexiones.Control;
-//import conexiones.IControl;
-//import conexiones.Partida;
-import java.awt.Color;
+
 import java.util.Calendar;
 
 /**

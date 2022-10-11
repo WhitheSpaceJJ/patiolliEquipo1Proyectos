@@ -87,16 +87,19 @@ public class FInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JButtonCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonCrearActionPerformed
-        // TODO add your handling code here:
-        /* Create and display the form */
+      this.mostrarPantallaCrear();
+    }//GEN-LAST:event_JButtonCrearActionPerformed
+
+    public void mostrarPantallaCrear(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
                 new FCrearPartida().setVisible(true);
             }
         });
-    }//GEN-LAST:event_JButtonCrearActionPerformed
-
+    }
+    
+    
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         this.recuperarPartidas();
     }//GEN-LAST:event_jButtonEntrarActionPerformed
