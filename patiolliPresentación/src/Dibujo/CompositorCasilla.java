@@ -6,7 +6,10 @@ package Dibujo;
 
 import java.util.ArrayList;
 
-
+/**
+ * Clase que representa el compuesto de figuras.
+ * @author Equipo1
+ */
 public class CompositorCasilla extends Figura {
 
     private java.util.List< Figura> lista = new ArrayList<>();

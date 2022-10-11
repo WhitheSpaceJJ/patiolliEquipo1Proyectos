@@ -8,7 +8,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Polygon;
 
-
+/**
+ * Clase que representa una casilla de castigo o con triangulo.
+ * @author Equipo1
+ */
 public class CasillaEspecial extends Figura {
 
     private int[] x;

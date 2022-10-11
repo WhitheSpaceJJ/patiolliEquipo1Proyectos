@@ -7,7 +7,10 @@ package Dibujo;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Polygon;
-
+/**
+ * Clase que representa una casilla de salida o entrada, casillas amarillas.
+ * @author Equipo1
+ */
 public class CasillaEntradaSalida  extends Figura {
     private int[] x;
     private int[] y;

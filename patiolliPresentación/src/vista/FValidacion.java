@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
-
+/**
+ * Clase que representa la validacion de la salida del juego.
+ * @author Equipo1 
+ */
 public class FValidacion extends javax.swing.JFrame {
 
     /**
@@ -90,9 +93,14 @@ public class FValidacion extends javax.swing.JFrame {
     
         
     }//GEN-LAST:event_jButton2ActionPerformed
- public void salirPartida(){
+ 
+    /**
+     * Salir de partida y aplicar cambios al juego.
+     */
+    public void salirPartida(){
          if (BOXseleccion.getSelectedItem().equals("No")) {
-        dispose();
+             //En espera.
+             dispose();
         }else{
         System.exit(0);
         }

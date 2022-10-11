@@ -11,18 +11,19 @@ import javax.swing.JOptionPane;
 
 /**
  * Frame de Creación de Partida.
+ *
  * @author Equipo1
  */
 public class FCrearPartida extends javax.swing.JFrame {
 
     private IControl control;
-    
+
     /**
      * Creates new form FCrearPartida
      */
     public FCrearPartida() {
         initComponents();
-        this.control =Control.getControl();
+        this.control = Control.getControl();
     }
 
     /**
@@ -221,13 +222,13 @@ public class FCrearPartida extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtApuestaActionPerformed
 //Hasta aqui.
-    
-    
+
+
     private void jButtonComenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComenzarActionPerformed
         if (validarConfiguracion() == false) {
             int tamaño = Integer.valueOf(TamañoBox.getSelectedItem().toString());
             int totalJugadores = Integer.valueOf(JugadoresBox.getSelectedItem().toString());
-            this.control.establecerJuego(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + "" + Calendar.getInstance().get(Calendar.SECOND), totalJugadores, tamaño,Double.valueOf(this.txtApuesta.getText()),Double.valueOf(this.txtFondo.getText()));
+            this.control.establecerJuego(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + "" + Calendar.getInstance().get(Calendar.SECOND), totalJugadores, tamaño, Double.valueOf(this.txtApuesta.getText()), Double.valueOf(this.txtFondo.getText()));
             this.control.agregarJugador(txtnomjugador.getText(), this.BoxColor.getSelectedItem().toString());
             this.mostrarPantallaLobby();
         }
@@ -238,36 +239,7 @@ public class FCrearPartida extends javax.swing.JFrame {
         this.txtnomjugador.setText("");
         this.BoxColor.setSelectedIndex(0);
     }//GEN-LAST:event_jButton2ActionPerformed
-//
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(FCrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(FCrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(FCrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(FCrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//    
-//    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> BoxColor;
@@ -332,15 +304,17 @@ public class FCrearPartida extends javax.swing.JFrame {
         return false;
     }
 //mostrar mensaje de error 
+
     public void mostrarMensajeErrorConfiguración(String mensaje) {
         JOptionPane.showMessageDialog(null, mensaje);
     }
 //Muestra la pantalla de lobby
+
     public void mostrarPantallaLobby() {
         FLobby lobby = FLobby.getFLobby();
-                                lobby.actualizaTablero();
         java.awt.EventQueue.invokeLater(() -> {
             lobby.setVisible(true);
+            lobby.actualizaTablero();
         });
         setVisible(false);
 

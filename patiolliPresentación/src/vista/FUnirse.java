@@ -1,10 +1,14 @@
 package vista;
 
-
 import control.Control;
 import control.IControl;
 import javax.swing.JOptionPane;
 
+/**
+ * Framde para la union de jugadores
+ *
+ * @author Judi
+ */
 public class FUnirse extends javax.swing.JFrame {
 
     private IControl control;
@@ -15,7 +19,7 @@ public class FUnirse extends javax.swing.JFrame {
     public FUnirse() {
         initComponents();
 //        this.partida = Partida.getPartida();
-        this.control =Control.getControl();
+        this.control = Control.getControl();
     }
 
     /**
@@ -179,17 +183,19 @@ public class FUnirse extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, mensaje);
     }
 //Metodo que muestra la pantallla de llobby
+
     public void mostrarPantallaLobby() {
         FLobby lobby = FLobby.getFLobby();
-        lobby.actualizaTablero();
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
                 lobby.setVisible(true);
+                lobby.actualizaTablero();
             }
         });
         setVisible(false);
     }
+    
 //Metodo que valida la configuración  datos del jugador, si la partida tiene espacios, etc.
     public boolean validarConfiguración() {
 

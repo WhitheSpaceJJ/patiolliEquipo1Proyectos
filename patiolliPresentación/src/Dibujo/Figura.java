@@ -6,7 +6,10 @@ package Dibujo;
 
 import java.util.Objects;
 
-
+/**
+ * Clase que representa las figuras(Casillas ,dados).
+ * @author Judi
+ */
 public abstract class Figura {
 
     private String posicion;

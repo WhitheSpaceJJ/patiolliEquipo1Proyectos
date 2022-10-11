@@ -9,7 +9,10 @@ import java.awt.Graphics;
 import java.awt.Polygon;
 import java.awt.Rectangle;
 
-
+/**
+ * Clase que dibuja los dados. Sera utilizado por el panel de tablero.
+ * @author Judi
+ */
 public class Dado extends Figura {
 
     private int x;

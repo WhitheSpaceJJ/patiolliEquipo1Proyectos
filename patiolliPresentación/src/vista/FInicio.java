@@ -89,7 +89,7 @@ public class FInicio extends javax.swing.JFrame {
     private void JButtonCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonCrearActionPerformed
       this.mostrarPantallaCrear();
     }//GEN-LAST:event_JButtonCrearActionPerformed
-
+//Mostrar pantalla de creacion de partida
     public void mostrarPantallaCrear(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override

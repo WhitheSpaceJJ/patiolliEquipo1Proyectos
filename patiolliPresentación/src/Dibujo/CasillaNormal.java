@@ -8,7 +8,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Polygon;
 
-
+/**
+ * Clase que representa una casila no bordeada, sin triangulo o de salida.
+ * @author Equipo1
+ */
 public class CasillaNormal extends Figura {
     private int[] x;
     private int[] y;

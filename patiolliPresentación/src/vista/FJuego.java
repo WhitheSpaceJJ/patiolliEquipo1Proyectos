@@ -16,14 +16,12 @@ public class FJuego extends javax.swing.JFrame {
     private static FJuego instanceFJuego;
     private int tamaño;
     private IControl control;
-
+//Comentario Prueba
     /**
      * Creates new form FLobbyHost
      */
     private FJuego() {
         initComponents();
-//        this.partida = Partida.getPartida();
-//        this.tamaño = partida.getTamañoTablero();
         this.control = Control.getControl();
         this.tamaño = this.control.getTamañoTablero();
         TableroGrafico tablero2 = new TableroGrafico(tamaño);

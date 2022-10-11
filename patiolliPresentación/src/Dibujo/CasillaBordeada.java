@@ -8,7 +8,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Polygon;
 
-
+/**
+ * Casilla que representa la punta de un aspa del tablero.
+ * @author Judi
+ */
 public class CasillaBordeada extends Figura {
 
     private int[] x;
@@ -24,6 +27,7 @@ public class CasillaBordeada extends Figura {
 
     @Override
     public void dibujar() {
+        //Se pinta en rojo solo con el fin  de identificarlo.
         g.setColor(Color.red);
         Polygon polygon1 = new Polygon(x, y, x.length);
         g.drawPolygon(polygon1);

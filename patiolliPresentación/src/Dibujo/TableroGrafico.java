@@ -7,7 +7,10 @@ package Dibujo;
 import java.awt.Graphics;
 import java.awt.Polygon;
 import javax.swing.JPanel;
-
+/**
+ * CLase que realiza el dibujo del tablero y lanzamienento de dados.
+ * @author Equipo1 
+ */
 public class TableroGrafico extends JPanel {
 
     private int tamaño;
