@@ -1,15 +1,12 @@
 package vista;
 
-//import conexiones.Partida;
-//import conexiones.Control;
-//import conexiones.IControl;
+
 import control.Control;
 import control.IControl;
 import javax.swing.JOptionPane;
 
 public class FUnirse extends javax.swing.JFrame {
 
-//    private Partida partida;
     private IControl control;
 
     /**
@@ -152,13 +149,6 @@ public class FUnirse extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonMenuActionPerformed
 
     private void jButtonUnirseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUnirseActionPerformed
-        // TODO add your handling code here:
-        /* Create and display the form */
-
-//        if (validarConfiguración() == false) {
-//            this.partida.agregarJugador(txtnomjugador.getText().toString(), this.BoxColor.getSelectedItem().toString());
-//            this.mostrarPantallaLobby();
-//        }
         if (validarConfiguración() == false) {
             this.control.agregarJugador(txtnomjugador.getText().toString(), this.BoxColor.getSelectedItem().toString());
             this.mostrarPantallaLobby();
@@ -184,10 +174,11 @@ public class FUnirse extends javax.swing.JFrame {
     private javax.swing.JTextField txtnomjugador;
     // End of variables declaration//GEN-END:variables
 
+    //Metodo que muestra mensaje de error
     public void mostrarMensajeError(String mensaje) {
         JOptionPane.showMessageDialog(null, mensaje);
     }
-
+//Metodo que muestra la pantallla de llobby
     public void mostrarPantallaLobby() {
         FLobby lobby = FLobby.getFLobby();
         lobby.actualizaTablero();
@@ -199,27 +190,13 @@ public class FUnirse extends javax.swing.JFrame {
         });
         setVisible(false);
     }
-
+//Metodo que valida la configuración  datos del jugador, si la partida tiene espacios, etc.
     public boolean validarConfiguración() {
 
         if (this.txtnomjugador.getText().isEmpty()) {
             this.mostrarMensajeError("Establece el nombre del jugador");
             return true;
         }
-//
-//        if (this.partida.validarJugadores()) {
-//            this.mostrarMensajeError("Ya no hay espacios para la partida actual.Espera a que termine.");
-//            return true;
-//        }
-//        if (this.partida.verificarNombre(this.txtnomjugador.getText())) {
-//            this.mostrarMensajeError("Nombre ya ocupado");
-//            return true;
-//        }
-//        if (this.partida.verificarColor(this.BoxColor.getSelectedItem().toString())) {
-//            this.mostrarMensajeError("Color ya ocupado");
-//            return true;
-//        }
-
         if (this.control.validarJugadores()) {
             this.mostrarMensajeError("Ya no hay espacios para la partida actual.Espera a que termine.");
             return true;

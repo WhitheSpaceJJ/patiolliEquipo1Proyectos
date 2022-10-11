@@ -6,12 +6,20 @@ package Dominio;
 
 import java.util.ArrayList;
 
-
+/**
+ * Clase que representa el tablero de la partida.
+ *
+ * @author Equipo 1
+ */
 public class Tablero {
+//Numero de tablero.
 
     private String numeroTablero;
+    //Casillas del tablero
     private ArrayList<Casilla> casillas = new ArrayList();
+    //Jugadores del tablero.
     private ArrayList<Jugador> jugadores = new ArrayList();
+//Constructores 
 
     public Tablero() {
     }
@@ -19,6 +27,7 @@ public class Tablero {
     public Tablero(String numeroTablero) {
         this.numeroTablero = numeroTablero;
     }
+//Metodos get y set
 
     public String getNumeroTablero() {
         return numeroTablero;
@@ -43,9 +52,7 @@ public class Tablero {
     public void setJugadores(ArrayList<Jugador> jugadores) {
         this.jugadores = jugadores;
     }
-    
-    
-
+//Metodo to string.    
 
     @Override
     public String toString() {

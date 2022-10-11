@@ -4,17 +4,16 @@
  */
 package vista;
 
-//import conexiones.Control;
-//import conexiones.IControl;
 import control.Control;
 import control.IControl;
-//import conexiones.Partida;
 
 import javax.swing.JOptionPane;
-
+/**
+ * Frame de inicio del juego.
+ * @author Equipo1
+ */
 public class FInicio extends javax.swing.JFrame {
 
-//  private Partida partida;
     private IControl control;
 
     /**
@@ -22,8 +21,7 @@ public class FInicio extends javax.swing.JFrame {
      */
     public FInicio() {
         initComponents();
-        this.control =Control.getControl();
-//        this.partida=Partida.getPartida();
+        this.control = Control.getControl();
     }
 
     /**
@@ -141,17 +139,9 @@ public class FInicio extends javax.swing.JFrame {
         });
     }
 
+    //Metodo que valida si una partida a sido establecida o creada.
+    //Con el fin de realizar una adecuada simulacion
     public void recuperarPartidas() {
-//        if (this.partida.validarCreacion()) {
-//            this.mostrarMensajeError("No hay partidas creadas por el momento");
-//        } else {
-//            java.awt.EventQueue.invokeLater(new Runnable() {
-//                @Override
-//                public void run() {
-//                    new FUnirse().setVisible(true);
-//                }
-//            });
-//        }
         if (this.control.validarCreacion()) {
             this.mostrarMensajeError("No hay partidas creadas por el momento");
         } else {
@@ -164,11 +154,13 @@ public class FInicio extends javax.swing.JFrame {
         }
 
     }
+//Metodo que muestra mensaje de error. 
 
     public void mostrarMensajeError(String mensaje) {
         JOptionPane.showMessageDialog(null, mensaje);
     }
 
+    //Metodo que muestra la pantalla de unirse.
     public void mostrarPantallaUnirse() {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

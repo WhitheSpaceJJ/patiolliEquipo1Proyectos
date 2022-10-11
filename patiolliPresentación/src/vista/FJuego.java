@@ -8,15 +8,12 @@ import Dibujo.DadoGrafico;
 import Dibujo.TableroGrafico;
 import control.Control;
 import control.IControl;
-//import conexiones.Control;
-//import conexiones.IControl;
-import java.awt.Graphics;
-//import conexiones.Partida;
-//import conexiones.Turno;
-
+/**
+ * Clase que representa el juego.
+ * @author Equipo1.
+ */
 public class FJuego extends javax.swing.JFrame {
 
-//    private Partida partida;
     private static FJuego instanceFJuego;
     private int tamaño;
     private DadoGrafico dados;
@@ -44,10 +41,7 @@ public class FJuego extends javax.swing.JFrame {
         return instanceFJuego;
     }
 
-//    @Override
-//    public void paint(Graphics g) {
-//        super.paint(g);
-//    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -304,10 +298,7 @@ public class FJuego extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-//    @Override
-//    public void repaint() {
-//
-//    }
+
 
     private void lanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanzarActionPerformed
 //        this.dados = new DadoGrafico();

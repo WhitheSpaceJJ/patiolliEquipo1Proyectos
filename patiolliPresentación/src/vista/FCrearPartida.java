@@ -14,13 +14,13 @@ import javax.swing.JOptionPane;
 import java.awt.Color;
 import java.util.Calendar;
 
-
+/**
+ * Frame de Creación de Partida.
+ * @author Equipo1
+ */
 public class FCrearPartida extends javax.swing.JFrame {
 
-//    private Partida partida;
-//Hola
     private IControl control;
-    
     
     /**
      * Creates new form FCrearPartida
@@ -28,7 +28,6 @@ public class FCrearPartida extends javax.swing.JFrame {
     public FCrearPartida() {
         initComponents();
         this.control =Control.getControl();
-//        this.partida = Partida.getPartida();
     }
 
     /**
@@ -209,7 +208,8 @@ public class FCrearPartida extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+//Inicio.
+    //Se nos ha pasado quitar 
     private void txtFondoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFondoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFondoActionPerformed
@@ -225,15 +225,14 @@ public class FCrearPartida extends javax.swing.JFrame {
     private void txtApuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApuestaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtApuestaActionPerformed
-
+//Hasta aqui.
+    
+    
     private void jButtonComenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComenzarActionPerformed
-        // TODO add your handling code here:
         if (validarConfiguracion() == false) {
             int tamaño = Integer.valueOf(TamañoBox.getSelectedItem().toString());
             int totalJugadores = Integer.valueOf(JugadoresBox.getSelectedItem().toString());
-//            this.partida.establecerJuego(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + "" + Calendar.getInstance().get(Calendar.SECOND), totalJugadores, tamaño);
-//            this.partida.agregarJugador(txtnomjugador.getText(), this.BoxColor.getSelectedItem().toString());
-            this.control.establecerJuego(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + "" + Calendar.getInstance().get(Calendar.SECOND), totalJugadores, tamaño);
+            this.control.establecerJuego(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + "" + Calendar.getInstance().get(Calendar.SECOND), totalJugadores, tamaño,Double.valueOf(this.txtApuesta.getText()),Double.valueOf(this.txtFondo.getText()));
             this.control.agregarJugador(txtnomjugador.getText(), this.BoxColor.getSelectedItem().toString());
             this.mostrarPantallaLobby();
         }
@@ -300,6 +299,7 @@ public class FCrearPartida extends javax.swing.JFrame {
     private javax.swing.JTextField txtnomjugador;
     // End of variables declaration//GEN-END:variables
 
+//Valida la configuracion de la creacion datos, nombre del jugador, montos,etc.
     public boolean validarConfiguracion() {
         if (txtnomjugador.getText().isEmpty()) {
             this.mostrarMensajeErrorConfiguración("Establece el nombre del jugador");
@@ -307,29 +307,23 @@ public class FCrearPartida extends javax.swing.JFrame {
         }
         Double m;
         try {
-//Azul, Amarillo, Rojo, Verde
             m = Double.valueOf(this.txtFondo.getText());
         } catch (Exception e) {
             this.mostrarMensajeErrorConfiguración("El monto de dinero contienen caracteres invalidos");
-//            JOptionPane.showMessageDialog(null, "El monto de dinero contienen caracteres invalidos");
             return true;
         }
 
         if (m > 2000) {
-//            JOptionPane.showMessageDialog(null, "Por el momentto el monto de dinero debe de ser menor a 2000");
             this.mostrarMensajeErrorConfiguración("Por el momentto el monto de dinero debe de ser menor a 2000");
             return true;
         } else if (m < 1000) {
-//            JOptionPane.showMessageDialog(null, "Por el momentto el monto de dinero debe de ser menor a 2000");
             this.mostrarMensajeErrorConfiguración("Por el momentto el monto de dinero debe de ser mayor a 1000");
             return true;
         } else {
             Double a;
             try {
-//Azul, Amarillo, Rojo, Verde
                 a = Double.valueOf(this.txtApuesta.getText());
             } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, "El monto de apuesta contienen caracteres invalidos");
                 this.mostrarMensajeErrorConfiguración("El monto de apuesta contienen caracteres invalidos");
                 return true;
             }
@@ -342,11 +336,11 @@ public class FCrearPartida extends javax.swing.JFrame {
         }
         return false;
     }
-
+//mostrar mensaje de error 
     public void mostrarMensajeErrorConfiguración(String mensaje) {
         JOptionPane.showMessageDialog(null, mensaje);
     }
-
+//Muestra la pantalla de lobby
     public void mostrarPantallaLobby() {
         FLobby lobby = FLobby.getFLobby();
                                 lobby.actualizaTablero();

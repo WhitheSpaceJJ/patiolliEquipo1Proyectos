@@ -7,12 +7,11 @@ package control;
 import Dominio.Tablero;
 
 /**
- *
- * @author Judi
+ * Interface de controlador..
+ * @author Equipo1
  */
 public interface IControl {
-
-    public void establecerJuego(String numeroPartida, int totalJugadores, int tamañoT);
+    public void establecerJuego(String numeroPartida, int totalJugadores, int tamañoT,double penalización,double montoJugador);
 
     public void destruirPartida();
 

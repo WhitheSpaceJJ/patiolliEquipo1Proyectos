@@ -5,9 +5,15 @@ package Dominio;
  * @author Equipo 1 
  */
 public class Ficha {
+    /**
+     * Numero
+     */
    private int numero;
+   /**
+    * Jugador que pertenece la ficha
+    */
    private Jugador jugador;
-
+//Constructores
     public Ficha() {
     }
 
@@ -15,7 +21,7 @@ public class Ficha {
         this.numero = numero;
         this.jugador = jugador;
     }
-
+//Metodos get y set
     public int getNumero() {
         return numero;
     }
@@ -31,7 +37,7 @@ public class Ficha {
     public void setJugador(Jugador jugador) {
         this.jugador = jugador;
     }
-
+//Metodo to String
     @Override
     public String toString() {
         return "Ficha{" + "numero=" + numero + ", jugador=" + jugador + '}';
