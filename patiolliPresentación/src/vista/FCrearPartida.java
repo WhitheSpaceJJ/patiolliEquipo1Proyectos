@@ -6,9 +6,8 @@ package vista;
 
 import control.Control;
 import control.IControl;
-import javax.swing.JOptionPane;
-
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 /**
  * Frame de Creación de Partida.
