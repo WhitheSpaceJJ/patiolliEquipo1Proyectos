@@ -301,9 +301,9 @@ public class FJuego extends javax.swing.JFrame {
 
 
     private void lanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanzarActionPerformed
-//        this.dados = new DadoGrafico();
-//        getContentPane().add(dados);
-//        dados.setBounds(620, 240, 350, 350);
+
+        //Aun no implementado se prente realizar cuando tengamos en claro la arquitectura.
+        
     }//GEN-LAST:event_lanzarActionPerformed
 
 
