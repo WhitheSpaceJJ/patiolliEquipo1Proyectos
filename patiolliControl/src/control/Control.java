@@ -93,6 +93,7 @@ public class Control implements IControl {
      */
     @Override
     public boolean validarCreacion() {
+                this.partida = Partida.getPartida();
         return this.partida.validarCreacion();
     }
 /**
