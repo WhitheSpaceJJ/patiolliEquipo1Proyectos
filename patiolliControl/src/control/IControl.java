@@ -8,7 +8,7 @@ import Dominio.Jugador;
 import Dominio.Tablero;
 
 /**
- * Interface de controlador..
+ * Interface de controlador.Con los metodos que esta tendra y que se obentran desde partida.
  * @author Equipo1
  */
 public interface IControl {

@@ -6,7 +6,10 @@ import Dominio.Tablero;
 import Dominio.Tablero;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Clase que representa la partida.
+ * @author Partida
+ */
 class Partida {
 
     private static Partida instancePartida;
@@ -21,7 +24,7 @@ class Partida {
        this.turno = new Turno();
        this.contadorTurno=0;
     }
-
+//Obtener partida
     public static Partida getPartida() {
         if (instancePartida == null) {
             instancePartida = new Partida();
@@ -29,7 +32,7 @@ class Partida {
         }
         return instancePartida;
     }
-
+//Establcer partida.Penalizacion monto por jugador, tamaño detablero, casilla.
     public void establecerJuego(String numeroPartida, int totalJugadores, int tamañoT) {
         this.numeroPartida = numeroPartida;
         this.tamañoTablero = tamañoT;
@@ -56,11 +59,11 @@ class Partida {
         this.tamañoTablero = tamañoT;
         this.totalJugadores = totalJugadores;
     }
-
+//Termina la partida.
     public void destruirPartida() {
         instancePartida = null;
     }
-
+//Agrega jugador a la partida.
     public boolean agregarJugador(String nombre, String color) {
         if (tablero.getJugadores().size() < this.totalJugadores) {
             tablero.getJugadores().add(new Jugador(nombre, color));
@@ -68,7 +71,7 @@ class Partida {
         }
         return false;
     }
-
+//Verifica si el nombre aun sigue disponible
     public boolean verificarNombre(String nombre) {
         for (int i = 0; i < tablero.getJugadores().size(); i++) {
             String nombreJugador = tablero.getJugadores().get(i).getNombre();
@@ -78,7 +81,7 @@ class Partida {
         }
         return false;
     }
-
+//Verifica si el color aun sigue disponible
     public boolean verificarColor(String color) {
         for (int i = 0; i < tablero.getJugadores().size(); i++) {
             String colorJugador = tablero.getJugadores().get(i).getColor();
@@ -88,46 +91,44 @@ class Partida {
         }
         return false;
     }
-
+//Valida si el la paartida ha sido creada, o esatablecida(Tablero).
     public boolean validarCreacion() {
         return tablero.getCasillas().isEmpty();
     }
-
+//Valida la disponibilidad de jugadores, si el juego aun no esta completo..
     public boolean validarJugadores() {
         return tablero.getJugadores().size() == this.totalJugadores;
     }
-
+//Obtiene el total de jugadores.
     public int getTotalJugadores() {
         return totalJugadores;
     }
-
+//Obtiene el tamaño del tablero.
     public int getTamañoTablero() {
         return tamañoTablero;
     }
-
+//Obtener el tablero de la partida.
     public Tablero getTablero() {
         return tablero;
     }
-
+//Obtener el numero de partida
     public String getNumeroPartida() {
         return numeroPartida;
     }
-
+//Establecer el numero de partida.
     public void setNumeroPartida(String numeroPartida) {
         this.numeroPartida = numeroPartida;
     }
-
+//Establecer total de jugadores.
     public void setTotalJugadores(int totalJugadores) {
         this.totalJugadores = totalJugadores;
     }
-
+//Establecer el tamaño del tablero
     public void setTamañoTablero(int tamañoTablero) {
         this.tamañoTablero = tamañoTablero;
     }
-
-    
-    
-    
+//Obtener turno actual y establecer el siguiente turno.
+//Sigue en proceso.    
     public Turno getTurno() {
         if (tablero.getJugadores().size() - 1 == contadorTurno) {
             contadorTurno = 0;
