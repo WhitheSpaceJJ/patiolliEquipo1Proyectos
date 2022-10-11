@@ -4,6 +4,7 @@
  */
 package control;
 
+import Dominio.Jugador;
 import Dominio.Tablero;
 
 /**
@@ -33,6 +34,6 @@ public interface IControl {
 
     public String getNumeroPartida();
 
-    public Turno getTurno();
+    public Jugador getTurno();
 
 }

@@ -125,8 +125,8 @@ public class Control implements IControl {
     }
 //Obtiene el turno actual.
     @Override
-    public Turno getTurno() {
-        return this.partida.getTurno();
+    public Jugador getTurno() {
+        return this.partida.getTurno().getJugador();
     }
 
 }

@@ -7,7 +7,7 @@ package control;
 import Dominio.Jugador;
 
 
-public class Turno {
+class Turno {
     private Jugador jugador;
 
     public Jugador getJugador() {

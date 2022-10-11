@@ -5,6 +5,7 @@
 package vista;
 
 import Dibujo.TableroGrafico;
+import Dominio.Jugador;
 import control.Control;
 import control.IControl;
 /**
@@ -27,7 +28,8 @@ public class FJuego extends javax.swing.JFrame {
         TableroGrafico tablero2 = new TableroGrafico(tamaño);
         getContentPane().add(tablero2);
         tablero2.setBounds(0, 0, 600, 600);
-        LNombreJugador.setText(control.getTurno().getJugador().getNombre());
+        Jugador jugador=this.control.getTurno();
+        LNombreJugador.setText(jugador.getNombre());
     }
 
     public static FJuego getFJuego() {
