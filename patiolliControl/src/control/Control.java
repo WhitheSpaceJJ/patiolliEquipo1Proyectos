@@ -61,9 +61,9 @@ public class Control implements IControl {
  * @return  true si fue agregado, false en caso contrario.
  */
     @Override
-    public boolean agregarJugador(String nombre, String color) {
+    public boolean agregarJugador(Jugador jugador) {
 //        return Partida.getPartida().agregarJugador(nombre, color);
-        return this.partida.agregarJugador(nombre, color);
+        return this.partida.agregarJugador(jugador);
     }
 
     /**

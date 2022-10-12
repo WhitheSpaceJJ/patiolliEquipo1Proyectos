@@ -4,6 +4,7 @@
  */
 package vista;
 
+import Dominio.Jugador;
 import control.Control;
 import control.IControl;
 import java.util.Calendar;
@@ -229,7 +230,9 @@ public class FCrearPartida extends javax.swing.JFrame {
             int tamaño = Integer.valueOf(TamañoBox.getSelectedItem().toString());
             int totalJugadores = Integer.valueOf(JugadoresBox.getSelectedItem().toString());
             this.control.establecerJuego(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + "" + Calendar.getInstance().get(Calendar.SECOND), totalJugadores, tamaño, Double.valueOf(this.txtApuesta.getText()), Double.valueOf(this.txtFondo.getText()));
-            this.control.agregarJugador(txtnomjugador.getText(), this.BoxColor.getSelectedItem().toString());
+//            this.control.agregarJugador(txtnomjugador.getText(), this.BoxColor.getSelectedItem().toString());
+            Jugador jugador = new Jugador(txtnomjugador.getText(), this.BoxColor.getSelectedItem().toString());
+            this.control.agregarJugador(jugador);
             this.mostrarPantallaLobby();
         }
     }//GEN-LAST:event_jButtonComenzarActionPerformed

@@ -1,5 +1,6 @@
 package vista;
 
+import Dominio.Jugador;
 import control.Control;
 import control.IControl;
 import javax.swing.JOptionPane;
@@ -154,7 +155,9 @@ public class FUnirse extends javax.swing.JFrame {
 
     private void jButtonUnirseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUnirseActionPerformed
         if (validarConfiguración() == false) {
-            this.control.agregarJugador(txtnomjugador.getText().toString(), this.BoxColor.getSelectedItem().toString());
+//            this.control.agregarJugador(txtnomjugador.getText().toString(), this.BoxColor.getSelectedItem().toString());
+            Jugador jugador = new Jugador(txtnomjugador.getText(), this.BoxColor.getSelectedItem().toString());
+            this.control.agregarJugador(jugador);
             this.mostrarPantallaLobby();
         }
 
@@ -195,7 +198,7 @@ public class FUnirse extends javax.swing.JFrame {
         });
         setVisible(false);
     }
-    
+
 //Metodo que valida la configuración  datos del jugador, si la partida tiene espacios, etc.
     public boolean validarConfiguración() {
 

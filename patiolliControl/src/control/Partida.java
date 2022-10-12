@@ -64,9 +64,9 @@ class Partida {
         instancePartida = null;
     }
 //Agrega jugador a la partida.
-    public boolean agregarJugador(String nombre, String color) {
+    public boolean agregarJugador(Jugador jugador) {
         if (tablero.getJugadores().size() < this.totalJugadores) {
-            tablero.getJugadores().add(new Jugador(nombre, color));
+            tablero.getJugadores().add(jugador);
             return true;
         }
         return false;

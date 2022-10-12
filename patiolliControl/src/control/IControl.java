@@ -16,7 +16,7 @@ public interface IControl {
 
     public void destruirPartida();
 
-    public boolean agregarJugador(String nombre, String color);
+    public boolean agregarJugador(Jugador jugador);
 
     public boolean verificarNombre(String nombre);
 
