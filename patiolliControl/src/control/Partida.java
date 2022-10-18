@@ -42,6 +42,7 @@ class Partida {
                 //Añadir casillas 60 casillas
                 tablero.getCasillas().add(new Casilla("Entrada/Salida"));
                 tablero.getCasillas().add(new Casilla("Normal"));
+                
                 break;
             case 12:
                 //Añadir casillas 52 casillas
